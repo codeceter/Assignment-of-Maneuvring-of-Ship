@@ -35,7 +35,7 @@
 %    -0.0000    1.0000
 
 
-function [result] = getODEsolu(myfun, x_init, y_init, x, h)
+function [result] = solveODE(myfun, x_init, y_init, x, h)
 
 if nargin == 4
     h = 0.02;
@@ -50,6 +50,8 @@ n = length(x);
 p = zeros(n, length(y_init) );
 for i=1:n
     p(i,:) = RGKT(myfun, x_init, y_init, x(i), h);
+	x_init = x(i);
+	y_init = p(i,:);
 end
 result = p;
 end
