@@ -15,7 +15,7 @@
 % x0=0;
 % y0=[0 1];
 % x=0:pi/6:pi*2;
-% y=getODEsolu(wavefun, x0, y0, x)
+% y=solveODE(wavefun, x0, y0, x)
 
 % Answer:
 % y =
@@ -54,6 +54,7 @@ for i=1:n
 	y_init = p(i,:);
 end
 result = p;
+
 end
 
 function p = RGKT(f, t0, p0, t, h)
