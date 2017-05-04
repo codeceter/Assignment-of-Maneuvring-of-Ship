@@ -1,14 +1,13 @@
-% Runge-Kutta Algorithm.
-% A numerical method to solve ordinary differential equation (ODE).
-% 说明：该函数读入一个常微分方程，初始点和待求位置x，求得该点的取值y
+% Runge-Kutta Algorithm. A numerical method to solve ordinary differential equation (ODE).
+% ˵�����ú�������һ����΢�ַ��̣���ʼ��ʹ���λ��x����øõ��ȡֵy
 
-% myfun：常微分方程，以匿名函数的形式读入。
-% x_init：初始点的横坐标，为一个标量X，表示常微分方程中唯一的已知量
-% y_init：初始点的纵坐标，为一个向量Y，向量的长度为多元常微分方程的未知量个数
-% x：待求点的横坐标，可以为一个向量
-% h：步长，缺省值为0.02
-% result：结果矩阵，矩阵的行数等于向量x的长度，矩阵的列数等于未知量的个数。
-%         矩阵每一行代表一个待求点的所有未知量。
+% myfun����΢�ַ��̣���������������ʽ���롣
+% x_init����ʼ��ĺ����꣬Ϊһ������X����ʾ��΢�ַ�����Ψһ����֪��
+% y_init����ʼ��������꣬Ϊһ������Y�������ĳ���Ϊ��Ԫ��΢�ַ��̵�δ֪������
+% x�������ĺ����꣬����Ϊһ������
+% h��������ȱʡֵΪ0.5
+% result��������󣬾����������������x�ĳ��ȣ��������������δ֪���ĸ�����
+%         ����ÿһ�д���һ������������δ֪����
 
 % Test sample:
 % wavefun = @(x,y) [y(2), -y(1)];
@@ -38,7 +37,7 @@
 function [result] = solveODE(myfun, x_init, y_init, x, h)
 
 if nargin == 4
-    h = 0.02;
+    h = 0.5;
 end
 if nargin < 4
     error('not enough parameter for this function');

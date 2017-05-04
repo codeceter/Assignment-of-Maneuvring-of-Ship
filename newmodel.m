@@ -1,8 +1,8 @@
 
 function [result] = newmodel(L, U0, rho)
-% 返回一个关于u, v, rad, delta的多元常微分方程组。若参数为空，取默认值：L=171.8m, u0=10.288 m/s, v0=0, rho = 1000 kg/m^3。
-% Author: YanZhiyong/严志勇
-% 此函数用于建立基于Abkowitz的船舶操纵模型
+% ����һ������u, v, rad, delta�Ķ�Ԫ��΢�ַ����顣������Ϊ�գ�ȡĬ��ֵ��L=171.8m, u0=10.288 m/s, v0=0, rho = 1000 kg/m^3��
+% Author: YanZhiyong/��־��
+% �˺������ڽ�������Abkowitz�Ĵ�������ģ��
 switch nargin
     case 3
 	case 2

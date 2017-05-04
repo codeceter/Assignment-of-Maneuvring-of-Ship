@@ -47,6 +47,7 @@ for times = 1:5
 		psi(i) = psi(i-1) + yt(3);
 	end
 end
-hold on;
-plot(1:i-1, delta(1:i-1) );
-plot(1:i-1, psi(1:i-1) );
+plot(1:i-1, delta(1:i-1), 1:i-1, psi(1:i-1) );
+title('Z形操舵试验');
+xlabel('时间t/s');
+ylabel('角度');
