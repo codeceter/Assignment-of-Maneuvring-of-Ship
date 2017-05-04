@@ -1,0 +1,12 @@
+clear;
+L = 171.8;
+u0 = 10.288;
+rho = 1000;
+delta = 35/57.3;
+m = newmodel(L, [u0, 0], rho);
+t = 0:480;
+Y = solveODE(m, 0, [u0, 0, 0, delta], t, 0.5);
+psi = cumsum(Y(:,3));
+xi = cumsum(Y(:,1).*cos(psi) - Y(:,2).*sin(psi));
+yi = cumsum(Y(:,1).*sin(psi) + Y(:,2).*cos(psi));
+plot(xi, -yi);
