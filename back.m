@@ -17,6 +17,8 @@ xi = cumsum(Y(:,1).*cos(psi) - Y(:,2).*sin(psi));
 yi = cumsum(Y(:,1).*sin(psi) + Y(:,2).*cos(psi));
 subplot(1, 3, 1);
 plot(xi, -yi); % 图1：回舵试验运行轨迹
+xlabel('X');
+ylabel('Y');
 axis equal;
 title('回舵试验轨迹曲线')
 subplot(1, 3, 2);
@@ -26,6 +28,6 @@ xlabel('时间t/s')
 ylabel('首向角\psi');
 subplot(1, 3, 3);
 semilogy(T, Y(:,3) ); % 图3：回舵试验角速度r变化
-title('回舵试验角速度r (s^{-1})变化');
+title('回舵试验角速度r 变化');
 xlabel('时间t /s')
 ylabel('角速度 (s^{-1})');

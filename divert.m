@@ -13,8 +13,10 @@ for i = 1:2
     xi = cumsum(Y(:,1).*cos(psi) - Y(:,2).*sin(psi));
     yi = cumsum(Y(:,1).*sin(psi) + Y(:,2).*cos(psi));
     subplot(2, 2, i*2-1);
-    plot(xi, yi);
+    plot(xi, -yi);
 	title('»Ø×ªÊÔÑé¹ì¼£');
+	xlabel('X');
+	ylabel('Y');
     axis equal;
 	subplot(2, 2, i*2);
 	plot(t, Y(:,3));
