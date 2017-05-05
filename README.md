@@ -1,4 +1,5 @@
-<script type="text/javascript" src="https://stackedit.io/libs/MathJax/MathJax.js?config=TeX-AMS_HTML"></script>
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
+<!--<script type="text/javascript" src="https://stackedit.io/libs/MathJax/MathJax.js?config=TeX-AMS_HTML"></script>-->
 # 操纵性大作业说明文档 #
 1. **实验目标**
 基于Abkowitz非线性数学模型，构建关于船舶运动与舵角的操纵性常微分方程，求解模拟船舶在下列三个试验中的运动状态：
